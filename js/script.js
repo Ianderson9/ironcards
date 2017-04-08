@@ -29,10 +29,10 @@ function draw() {
   textSize(26*.8);
   text("Train",1131*.8,758*.8+26*.8);
   text("Submit",1118*.8,817*.8+26*.8);
-  image(computer,49*.8,181*.8);
+  image(computer,49*.8,181*.8,computer.width,computer.height);
   // image(computer,49*.8,181*.8,computer.width/10,computer.height/10);
   image(paper,531*.8,93*.8,270*.8,386*.8);
   fill(grey);
-  rect(49*.8,181*.8,416*.8,298*.8);
-  rect(531*.8,93*.8,270*.8,386*.8);
+  // rect(49*.8,181*.8,416*.8,298*.8);
+  // rect(531*.8,93*.8,270*.8,386*.8);
 }
