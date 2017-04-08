@@ -3,6 +3,8 @@ var score;
 var skill;
 var time;
 // var back;
+var computer;
+var paper;
 function setup() {
   createCanvas(1315*.8,912*.8);
   background(51);
@@ -11,6 +13,7 @@ function setup() {
   skill = 0;
   time = 100;
   computer = loadImage('images/computer.png');
+  paper = loadImage('images/paper.png');
   // back = loadImage("interface.png");
 }
 
@@ -26,5 +29,9 @@ function draw() {
   textSize(26*.8);
   text("Train",1131*.8,758*.8+26*.8);
   text("Submit",1118*.8,817*.8+26*.8);
-  image(computer,0,0);
+  image(computer,49*.8,181*.8,416,298);
+  image(paper,531*.8,93*.8,270*.8,386*.8);
+  fill(grey);
+  rect(49*.8,181*.8,416*.8,298*.8);
+  rect(531*.8,93*.8,270*.8,386*.8);
 }
