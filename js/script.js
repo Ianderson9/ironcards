@@ -19,10 +19,12 @@ function draw() {
   elements_draw();
   fill(light_blue);
   textSize(34*.8);
+  textAlign(LEFT);
   text("Time: " + player.time + "hrs",35*.8,587*.8+34*.8);
   text("Skill Lvl: " + player.skill,1108*.8,587*.8+34*.8);
   fill(white);
   textSize(26*.8);
+
   text("Train",1131*.8,758*.8+26*.8);
   text("Submit",1118*.8,817*.8+26*.8);
   // image(computer,49*.8,181*.8,computer.width,computer.height);
