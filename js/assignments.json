@@ -1,0 +1,64 @@
+{
+  "array": [
+    {
+      "assignmentName": "Assignment 6",
+      "assignmentTime": 50,
+      "assignmentPoints": 100,
+      "questionText": "The last value in an array called ar can be found at index:",
+      "questionAnswer": "Ar.length - 1",
+      "aAnswer": "0",
+      "bAnswer": "ar.length",
+      "cAnswer": "1"
+    },
+    {
+      "assignmentName": "Assignment 5",
+      "assignmentTime": 40,
+      "assignmentPoints": 80,
+      "questionText": "The last value in an array called ar can be found at index:",
+      "questionAnswer": "Ar.length - 1",
+      "aAnswer": "0",
+      "bAnswer": "ar.length",
+      "cAnswer": "1"
+    },
+    {
+      "assignmentName": "Assignment 4",
+      "assignmentTime": 30,
+      "assignmentPoints": 60,
+      "questionText": "The last value in an array called ar can be found at index:",
+      "questionAnswer": "Ar.length - 1",
+      "aAnswer": "0",
+      "bAnswer": "ar.length",
+      "cAnswer": "1"
+    },
+    {
+      "assignmentName": "Assignment 3",
+      "assignmentTime": 20,
+      "assignmentPoints": 40,
+      "questionText": "The last value in an array called ar can be found at index:",
+      "questionAnswer": "Ar.length - 1",
+      "aAnswer": "0",
+      "bAnswer": "ar.length",
+      "cAnswer": "1"
+    },
+    {
+      "assignmentName": "Assignment 2",
+      "assignmentTime": 10,
+      "assignmentPoints": 20,
+      "questionText": "The last value in an array called ar can be found at index:",
+      "questionAnswer": "Ar.length - 1",
+      "aAnswer": "0",
+      "bAnswer": "ar.length",
+      "cAnswer": "1"
+    },
+    {
+      "assignmentName": "Assignment 1",
+      "assignmentTime": 10,
+      "assignmentPoints": 10,
+      "questionText": "The last value in an array called ar can be found at index:",
+      "questionAnswer": "Ar.length - 1",
+      "aAnswer": "0",
+      "bAnswer": "ar.length",
+      "cAnswer": "1"
+    }
+  ]
+}

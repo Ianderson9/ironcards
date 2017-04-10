@@ -3,6 +3,7 @@ Question = function(prompt,right,wronga,wrongb,wrongc) {
   this.right = right;
   this.wrong = [wronga,wrongb,wrongc];
   this.boxes = [0,0,0,0];
+  this.selected = false;
   this.show = function() {
     fill(grey);
     textSize(19*.8);
@@ -29,13 +30,18 @@ Question = function(prompt,right,wronga,wrongb,wrongc) {
       fill(grey);
       text(this.wrong[i],221*.8,292*.8+37*.8+i*37*.8,100*.8,78*.8);
     }
+
+    // get answer
+
     for(let i = 0; i < this.boxes.length; i++) {
-      if(mouseIsPressed) {
+      if(mouseIsPressed && this.selected) {
+
         if(mouseX > 135*.8 && mouseX < 135*.8+244*.8) {
           if(mouseY > 286*.8+37*.8*i+5*.8 && mouseY < 286*.8+37*.8*i+5*.8+20*.8) {
+            console.log(i);
             this.boxes[i] = 1;
             for(let j = 0; j < this.boxes.length; j++) {
-              if(i!=j) {
+              if(i != j) {
                 this.boxes[j] = 0;
               }
             }
@@ -44,4 +50,10 @@ Question = function(prompt,right,wronga,wrongb,wrongc) {
       }
     }
   }
+}
+
+function getQuestion() {
+  var chosen = questions[floor(random(questions.length))];
+  var q = new Question(chosen.prompt,chosen.right,chosen.wronga,chosen.wrongb,chosen.wrongc)
+  return q;
 }
