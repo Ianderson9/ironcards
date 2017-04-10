@@ -7,6 +7,7 @@ var assignments;
 var questions;
 var cards;
 var over;
+var drops;
 // var assignmentData;
 function preload() {
 
@@ -21,12 +22,19 @@ function setup() {
   paper = loadImage('images/paper.png');
   player = new Player();
   over = false;
+  drops = [];
+  for(let i = 0; i < 100; i++) {
+    drops.push(new Drop());
+  }
   // console.log(data);
   // back = loadImage("interface.png");
 }
 
 function draw() {
   background(light_green);
+  for(let i = 0; i < drops.length; i++) {
+    drops[i].show();
+  }
   // image(back,0,0);
   elements_draw();
   fill(light_blue);
@@ -89,4 +97,16 @@ function mouseClicked() {
 
 function keyTyped() {
   console.log(player.hand)
+}
+Drop = function() {
+  this.pos = createVector(random(width),random(height));
+  this.vel = random(5,10);
+  this.character = floor(random(2));
+  this.show = function() {
+    text(this.character,this.pos.x,this.pos.y);
+    this.pos.y += this.vel;
+    if(this.pos.y > height) {
+      this.pos.y = -10;
+    }
+  }
 }
