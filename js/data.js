@@ -12,7 +12,7 @@ loadData = function() {
       score: 50
     },
     {
-      name: "Prtfolio",
+      name: "Portfolio",
       time: 20,
       score: 20
     },
