@@ -5,6 +5,7 @@ function elements_setup() {
   white = color('#E6E6E6');
   grey = color('#6C6F7F');
   light_green = color('#56E39F');
+  accent = color('#A80874');
   elements = [];
   elements.push (new UIElement(18,23,846,513,10,dark_blue));
   elements.push (new UIElement(864,23,433,513,10,grey));
