@@ -4,14 +4,14 @@ Assignment = function(name,t) {
   this.time = t;
   this.score = 0;
   this.bonuses = [];
-  this.delay = 100;
+  this.delay = 200;
   this.countdown = false;
   this.done = false;
   this.show = function() {
     textSize(20*.8);
     textAlign(LEFT);
     fill(grey);
-    text(this.name+"("+this.time+")",589*.8,93*.8+39*.8);
+    text(this.name+"("+this.time+")",569*.8,93*.8+39*.8);
     if(this.countdown) {
       for(let i = 0; i < this.bonuses.length; i++) {
         textSize(15*.8);
