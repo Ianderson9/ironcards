@@ -8,10 +8,10 @@ Assignment = function(name,t) {
   this.countdown = false;
   this.done = false;
   this.show = function() {
-    textSize(25*.8);
+    textSize(20*.8);
     textAlign(LEFT);
     fill(grey);
-    text(this.name,589*.8,93*.8+39*.8);
+    text(this.name+"("+this.time+")",589*.8,93*.8+39*.8);
     if(this.countdown) {
       for(let i = 0; i < this.bonuses.length; i++) {
         textSize(15*.8);
@@ -46,8 +46,13 @@ Assignment = function(name,t) {
     this.bonuses.push(new Bonus("Assignment points",2,this.score));
     for(let i = 0; i < player.hand.length; i++) {
       if(player.hand[i].answered) {
-        this.bonuses.push(new Bonus(player.hand[i].name,0,player.hand[i].time));
-        this.bonuses.push(new Bonus(player.hand[i].name,1,player.hand[i].skill));
+        if(player.hand[i].question.correct) {
+          this.bonuses.push(new Bonus(player.hand[i].name,0,player.hand[i].time));
+          this.bonuses.push(new Bonus(player.hand[i].name,1,player.hand[i].skill));
+        } else {
+          this.bonuses.push(new Bonus(player.hand[i].name,0,player.hand[i].time*-1));
+          this.bonuses.push(new Bonus(player.hand[i].name,1,player.hand[i].skill*-1));
+        }
       }
     }
     var t = this.time;
